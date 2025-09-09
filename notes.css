@@ -1,0 +1,150 @@
+header {
+    border-radius: 12px;
+    padding: 15px 25px;
+    background: #4a90e2;
+    color: #fff;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header button {
+    float: right;
+    margin: -85px -18px 0px 0px;
+    background: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #4a90e2;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+header button:hover {
+    background: #f0f0f0;
+}
+
+.container2 {
+    max-width: 900px;
+    margin: 25px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+    margin-top: 12px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #357ABD;
+}
+
+#notesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.note {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.note:hover {
+    transform: translateY(-3px);
+}
+
+.note h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.note p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.note img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.note img:hover {
+    transform: scale(1.02);
+}
+
+/* Modal for preview */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+}

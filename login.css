@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 340px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background: #f1f1f1;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tabs button.active {
+    background: #4a90e2;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px -8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border: 1px solid #4a90e2;
+    outline: none;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background: #357ABD;
+}
+
+form {
+    display: none;
+}
+
+form.active {
+    display: block;
+}
+
+.msg {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}

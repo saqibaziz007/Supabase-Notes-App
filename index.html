@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup | Auth with Supabase</title>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button id="loginBtn" class="active" type="button">Login</button>
+            <button id="signupBtn" type="button">Signup</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="active">
+            <h2>Welcome Back</h2>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <button type="submit" class="submit-btn">Login</button>
+            <p class="msg" id="loginMsg"></p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm">
+            <h2>Create Account</h2>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+            <input type="password" id="signupPassword" placeholder="Enter your password" required>
+            <button type="submit" class="submit-btn">Signup</button>
+            <p class="msg" id="signupMsg"></p>
+        </form>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+
+</html>
