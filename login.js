@@ -71,7 +71,7 @@ signupForm.addEventListener("submit", async (e) => {
 
     if (error) {
         document.getElementById("signupMsg").textContent = error.message;
-        // Hide loader again
+        
         btn.disabled = false;
         btnText.textContent = "Signup";
         loader.style.display = "none";
