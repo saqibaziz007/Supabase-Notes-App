@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    background: linear-gradient(135deg, #168aad, #007200);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body {
 .container {
     background: #fff;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 12px;
     width: 340px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     animation: fadeIn 0.6s ease-in-out;
@@ -47,7 +47,7 @@ body {
 }
 
 .tabs button.active {
-    background: #4a90e2;
+    background: #38b000;
     color: white;
 }
 
@@ -58,17 +58,17 @@ h2 {
 }
 
 input {
-    width: 100%;
+    width: 90%;
     padding: 12px;
-    margin: 10px -8px;
+    margin: 10px 5px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
+    border-radius: 20px;
+    font-size: 12px;
     transition: border 0.3s ease;
 }
 
 input:focus {
-    border: 1px solid #4a90e2;
+    border: 1px solid #38b000;
     outline: none;
 }
 
@@ -77,9 +77,9 @@ button.submit-btn {
     padding: 12px;
     margin-top: 10px;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
-    background: #4a90e2;
+    background: #38b000;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -87,7 +87,7 @@ button.submit-btn {
 }
 
 button.submit-btn:hover {
-    background: #357ABD;
+    background: #277a00;
 }
 
 form {
@@ -99,8 +99,32 @@ form.active {
 }
 
 .msg {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
     margin-top: 10px;
     text-align: center;
     color: red;
+}
+button.submit-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+button .loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: none; /* Default hidden */
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }

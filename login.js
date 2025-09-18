@@ -23,32 +23,64 @@ signupBtn.addEventListener("click", () => {
     loginForm.classList.remove("active");
 });
 
-// Signup
-signupForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const email = document.getElementById("signupEmail").value;
-    const password = document.getElementById("signupPassword").value;
-
-    const { data, error } = await client.auth.signUp({ email, password });
-    if (error) {
-        document.getElementById("signupMsg").textContent = error.message;
-    } else {
-        document.getElementById("signupMsg").style.color = "green";
-        document.getElementById("signupMsg").textContent = "Signup successful! Check your email.";
-    }
-});
-
 // Login
 loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const btn = loginForm.querySelector(".submit-btn");
+    const btnText = btn.querySelector(".btn-text");
+    const loader = btn.querySelector(".loader");
+
+    // Show loader
+    btn.disabled = true;
+    btnText.textContent = "Loading...";
+    loader.style.display = "inline-block";
+
     const email = document.getElementById("loginEmail").value;
     const password = document.getElementById("loginPassword").value;
 
     const { data, error } = await client.auth.signInWithPassword({ email, password });
+
     if (error) {
         document.getElementById("loginMsg").textContent = error.message;
+
+        btn.disabled = false;
+        btnText.textContent = "Login";
+        loader.style.display = "none";
     } else {
         localStorage.setItem("user", JSON.stringify(data.session));
         window.location.href = "notes.html";
+    }
+});
+
+// Signup
+signupForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = signupForm.querySelector(".submit-btn");
+    const btnText = btn.querySelector(".btn-text");
+    const loader = btn.querySelector(".loader");
+
+    // Show loader
+    btn.disabled = true;
+    btnText.textContent = "Loading...";
+    loader.style.display = "inline-block";
+
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
+
+    const { data, error } = await client.auth.signUp({ email, password });
+
+    if (error) {
+        document.getElementById("signupMsg").textContent = error.message;
+        // Hide loader again
+        btn.disabled = false;
+        btnText.textContent = "Signup";
+        loader.style.display = "none";
+    } else {
+        document.getElementById("signupMsg").style.color = "green";
+        document.getElementById("signupMsg").textContent = "Signup successful! Check your email.";
+
+        btn.disabled = false;
+        btnText.textContent = "Signup";
+        loader.style.display = "none";
     }
 });
