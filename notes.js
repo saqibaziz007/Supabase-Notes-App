@@ -119,4 +119,4 @@ window.addEventListener("click", (e) => {
     if (e.target.id === "imgModal") {
         document.getElementById("imgModal").style.display = "none";
     }
-});
+}); 

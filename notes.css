@@ -137,7 +137,7 @@ button:hover {
 
 .note img:hover { transform: scale(1.02); }
 
-/* Modal for preview */
+/* MODAL FOR PREVIEW */
 .modal {
     display: none;
     position: fixed;
