@@ -1,4 +1,4 @@
-// ⚡ Supabase Config
+//Supabase Config
 const SUPABASE_URL = "https://elybfiwvdnrhhodhuywg.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVseWJmaXd2ZG5yaGhvZGh1eXdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTczNDYxMjAsImV4cCI6MjA3MjkyMjEyMH0.VHvVqDIKUPhSKB05o4tTIe113iChtcIubiLhyN0rvO8";
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
