@@ -1,6 +1,11 @@
 body {
+<<<<<<< HEAD
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #008000, #40916c);
+=======
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +16,11 @@ body {
 .container {
     background: #fff;
     padding: 25px;
+<<<<<<< HEAD
     border-radius: 20px;
+=======
+    border-radius: 15px;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     width: 340px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     animation: fadeIn 0.6s ease-in-out;
@@ -47,13 +56,18 @@ body {
 }
 
 .tabs button.active {
+<<<<<<< HEAD
     background: #38b000;
+=======
+    background: #4a90e2;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     color: white;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+<<<<<<< HEAD
     color: #132a13;
 }
 
@@ -64,11 +78,27 @@ input {
     border: 1px solid #ccc;
     border-radius: 20px;
     font-size: 12px;
+=======
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px -8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     transition: border 0.3s ease;
 }
 
 input:focus {
+<<<<<<< HEAD
     border: 1px solid #38b000;
+=======
+    border: 1px solid #4a90e2;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     outline: none;
 }
 
@@ -77,9 +107,15 @@ button.submit-btn {
     padding: 12px;
     margin-top: 10px;
     border: none;
+<<<<<<< HEAD
     border-radius: 20px;
     cursor: pointer;
     background: #38b000;
+=======
+    border-radius: 8px;
+    cursor: pointer;
+    background: #4a90e2;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -87,7 +123,11 @@ button.submit-btn {
 }
 
 button.submit-btn:hover {
+<<<<<<< HEAD
     background: #2a8500;
+=======
+    background: #357ABD;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
 }
 
 form {
@@ -99,8 +139,12 @@ form.active {
 }
 
 .msg {
+<<<<<<< HEAD
     font-size: 12px;
     font-weight: 600;
+=======
+    font-size: 14px;
+>>>>>>> 6614f0c42b322220e155afbead990fcd8e9cc067
     margin-top: 10px;
     text-align: center;
     color: red;
