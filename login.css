@@ -105,6 +105,7 @@ form.active {
     text-align: center;
     color: red;
 }
+
 button.submit-btn {
   position: relative;
   display: flex;

@@ -1,4 +1,3 @@
-
 const SUPABASE_URL = "https://elybfiwvdnrhhodhuywg.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVseWJmaXd2ZG5yaGhvZGh1eXdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTczNDYxMjAsImV4cCI6MjA3MjkyMjEyMH0.VHvVqDIKUPhSKB05o4tTIe113iChtcIubiLhyN0rvO8";
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -6,7 +5,6 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const noteForm = document.getElementById("noteForm");
 const notesContainer = document.getElementById("notesContainer");
 
-// Check session
 const session = JSON.parse(localStorage.getItem("user"));
 if (!session) {
     window.location.href = "index.html";
@@ -15,12 +13,25 @@ const userId = session.user.id;
 
 // Logout
 document.getElementById("logoutBtn").addEventListener("click", async () => {
-    await supabaseClient.auth.signOut();
-    localStorage.removeItem("user");
-    window.location.href = "index.html";
+
+    const logoutBtn = document.getElementById("logoutBtn");
+    const logoutText = logoutBtn.querySelector(".btn-text");
+    const logoutLoader = logoutBtn.querySelector(".loader");
+
+    logoutBtn.addEventListener("click", async () => {
+        // Show loader
+        logoutBtn.disabled = true;
+        logoutText.textContent = "Logging out...";
+        logoutLoader.style.display = "inline-block";
+
+        await supabaseClient.auth.signOut();
+        localStorage.removeItem("user");
+        window.location.href = "index.html";
+    });
+
 });
 
-// Load Notes from DB
+// Load Notes from Database
 async function loadNotes() {
     const { data, error } = await supabaseClient
         .from("notes")
@@ -44,7 +55,7 @@ async function loadNotes() {
         `;
         notesContainer.appendChild(div);
 
-        // Add click event for preview
+        // Image preview
         if (note.image_url) {
             div.querySelector("img").addEventListener("click", () => {
                 document.getElementById("modalImg").src = note.image_url;
@@ -65,7 +76,7 @@ noteForm.addEventListener("submit", async (e) => {
     const imageFile = document.getElementById("image").files[0];
     let imageUrl = null;
 
-    // Upload image if exists
+    // agar image ha tu upload karo
     if (imageFile) {
         const fileName = `${userId}-${Date.now()}-${imageFile.name}`;
 

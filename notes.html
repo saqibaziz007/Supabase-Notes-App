@@ -12,10 +12,13 @@
 <body>
     <header>
         <h1>My Notes</h1>
-        <button id="logoutBtn">Logout</button>
+        <button id="logoutBtn" class="submit-btn">
+            <span class="btn-text">Logout</span>
+            <span class="loader"></span>
+        </button>
     </header>
 
-    <div class="container">
+    <div class="container2">
         <form id="noteForm" class="note-form">
             <input type="text" id="title" placeholder="Heading" required>
             <textarea id="content" placeholder="Paragraph" required></textarea>
